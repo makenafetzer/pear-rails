@@ -1,14 +1,9 @@
 Rails.application.routes.draw do
   root to: 'home#index'
-  devise_for :users, :controllers => { :registrations => :registrations }
+  get '/matches', to: 'matches#index'
+  devise_for :users
   resources :users
-<<<<<<< HEAD
 
-=======
-  resources :conversations do
-    resources :messages
-  end
->>>>>>> 557599e24ae202a5846e51e76e57f82bb00052a4
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
